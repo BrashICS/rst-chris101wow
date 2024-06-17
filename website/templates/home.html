@@ -1,0 +1,19 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %}
+<html>
+<title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css')}}">
+</title>
+<body> 
+{% block content %}
+<h1 class="title">
+    Good {{greet_per}} {{user.first_name}}.
+
+</h1>
+
+<button onclick="runsched()">
+Run Sched
+</button>
+{% endblock %}
+
+</body>
+</html>

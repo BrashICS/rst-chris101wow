@@ -40,7 +40,6 @@
     "terminal.integrated.fontSize": 16,
     "terminal.integrated.rightClickBehavior": "copyPaste",
     "window.menuBarVisibility": "classic",
-    "workbench.activityBar.visible": true,
     "workbench.iconTheme": "material-icon-theme",
     "workbench.startupEditor": "none",
     "workbench.tips.enabled": false
