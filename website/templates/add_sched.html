@@ -1,0 +1,37 @@
+{% extends "base.html" %} {% block title %}Add New{% endblock %}
+
+{% block content %}
+<title>
+    <script src = "{{ url_for('static', filename='script.js')}}" defer></script>
+</title>
+<form method="POST">
+    <h3 align = "center">Add A New Schedule</h3>
+    <div class="form-group">
+      <label for="email">Name of Schedule</label>
+      <input type="text" class="form-control" id="email" name="sched_name" placeholder="Enter Name"/>
+    </div>
+    <div class="form-row">
+      <div class="col">
+        <input type="number" class="form-control" placeholder="Time of Day(hour)" name="TODh">
+      </div>
+      <div class="col">
+          <input type="number" class="form-control" placeholder="Time of Day(min)" name="TODm">
+        </div>
+        <div class="col" hidden>
+          <input type="text" class="form-control" placeholder="Time of Day(min)" name="per_of_day" value="am" id="per_of_day">
+        </div>
+        <div class="col">
+          <button name="region" class="btn btn-primary mb-2" type="button" value="am" onclick="change()">
+              <span id="am_pm">
+                  AM
+              </span>
+          </button>
+        </div>
+        <div class="col">
+          <input type="number" class="form-control" placeholder="Duration (seconds)" name="dura">
+        </div>
+    </div>
+    <br>
+      <button type="submit" class="btn btn-outline-success" >Create Schedule</button>
+</form>
+{% endblock %}
